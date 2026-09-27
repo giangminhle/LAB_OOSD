@@ -1,92 +1,116 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using QuanLyKhachSan.Forms; 
 
-namespace QuanLyKhachSan.Forms
+namespace QuanLyKhachSan.UI
 {
     public partial class FrmMain : Form
     {
+        private Label lblTitle;
+        private Button btnDanhMuc;
+        private Button btnPhongTienNghi;
+        private Button btnDatNhanPhong;
+        private Button btnSuDungDichVu;
+        private Button btnTraPhong;
+        private Button btnThongKe;
+        private Button btnThoat;
+
         public FrmMain()
         {
             InitializeComponent();
+            VeGiaoDien();
         }
 
-        private void InitializeComponent()
+        private void VeGiaoDien()
         {
-            Text = "Quản lý khách sạn";
-            Width = 800; // Mở rộng form ra để chứa 3 cột
-            Height = 450;
-            StartPosition = FormStartPosition.CenterScreen;
-            BackColor = Color.WhiteSmoke;
+            this.Text = "Quản lý khách sạn";
+            this.Size = new Size(760, 450);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.BackColor = Color.FromArgb(235, 240, 245);
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
 
-            // --- TIÊU ĐỀ ---
-            var title = new Label
+            this.Controls.Clear();
+
+            // Tiêu đề
+            lblTitle = new Label
             {
                 Text = "HỆ THỐNG QUẢN LÝ KHÁCH SẠN",
-                Font = new Font("Segoe UI", 18, FontStyle.Bold),
-                ForeColor = Color.Navy, // Chữ màu xanh đậm chuẩn mẫu
-                AutoSize = true
+                Font = new Font("Segoe UI", 16F, FontStyle.Bold),
+                ForeColor = Color.FromArgb(12, 50, 110),
+                AutoSize = true,
+                Location = new Point(190, 25)
             };
-            title.Location = new Point(190, 30); // Căn ra giữa
-            Controls.Add(title);
+            this.Controls.Add(lblTitle);
 
-            // --- THÔNG SỐ NÚT BẤM ---
-            int btnWidth = 200;
-            int btnHeight = 60;
-            int startX = 70;      // Tọa độ X bắt đầu (Cột 1)
-            int startY = 110;     // Tọa độ Y bắt đầu (Hàng 1)
-            int gapX = 220;       // Khoảng cách giữa các cột
-            int gapY = 90;        // Khoảng cách giữa các hàng
+            Size btnSize = new Size(210, 65);
+            // Tăng size font lên 1 chút để Emoji nhìn to rõ hơn
+            Font btnFont = new Font("Segoe UI", 11F, FontStyle.Regular); 
 
-            // --- KHỞI TẠO NÚT BẤM (Gắn sẵn tọa độ chia 3 cột) ---
-            var btnDanhMuc = MakeBtn("btnDanhMuc", "Danh mục", startX, startY, btnWidth, btnHeight);
-            var btnPhong = MakeBtn("btnPhong", "Phòng - Tiện nghi", startX + gapX, startY, btnWidth, btnHeight);
-            var btnDatPhong = MakeBtn("btnDatPhong", "Đặt / Nhận phòng", startX + gapX * 2, startY, btnWidth, btnHeight);
+            int col1 = 50;
+            int col2 = 270;
+            int col3 = 490;
 
-            var btnDichVu = MakeBtn("btnDichVu", "Sử dụng dịch vụ", startX, startY + gapY, btnWidth, btnHeight);
-            var btnTraPhong = MakeBtn("btnTraPhong", "Trả phòng - Thanh toán", startX + gapX, startY + gapY, btnWidth, btnHeight);
-            var btnThongKe = MakeBtn("btnThongKe", "Thống kê", startX + gapX * 2, startY + gapY, btnWidth, btnHeight);
+            int row1 = 80;
+            int row2 = 160;
+            int row3 = 240;
 
-            var btnThoat = MakeBtn("btnThoat", "Thoát", startX + gapX, startY + gapY * 2, btnWidth, btnHeight); // Nút thoát nằm giữa hàng 3
+            // Hàng 1 - Nhét thẳng Emoji vào chuỗi Text
+            btnDanhMuc = TaoButton("📋 Danh mục", new Point(col1, row1), btnSize, btnFont);
+            btnDanhMuc.Click += (s, e) => MoForm(new FrmDanhMuc());
 
-            // --- GẮN SỰ KIỆN CLICK ---
-            btnDanhMuc.Click += (s, e) => { using (var f = new FrmDanhMuc()) f.ShowDialog(this); };
-            btnPhong.Click += (s, e) => { using (var f = new FrmPhongTienNghi()) f.ShowDialog(this); };
-            btnDatPhong.Click += (s, e) => { using (var f = new FrmDatPhong()) f.ShowDialog(this); };
-            btnDichVu.Click += (s, e) => { using (var f = new FrmDichVu()) f.ShowDialog(this); };
-            btnTraPhong.Click += (s, e) => { using (var f = new FrmTraPhong()) f.ShowDialog(this); };
-            btnThongKe.Click += (s, e) => { using (var f = new FrmThongKe()) f.ShowDialog(this); };
-            btnThoat.Click += (s, e) =>
-            {
-                if (MessageBox.Show("Bạn có thực sự muốn thoát?", "Xác nhận",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    Close();
-            };
+            btnPhongTienNghi = TaoButton("🛏️ Phòng - Tiện nghi", new Point(col2, row1), btnSize, btnFont);
+            btnPhongTienNghi.Click += (s, e) => MoForm(new FrmPhongTienNghi());
 
-            // --- THÊM VÀO FORM ---
-            Controls.Add(btnDanhMuc);
-            Controls.Add(btnPhong);
-            Controls.Add(btnDatPhong);
-            Controls.Add(btnDichVu);
-            Controls.Add(btnTraPhong);
-            Controls.Add(btnThongKe);
-            Controls.Add(btnThoat);
+            btnDatNhanPhong = TaoButton("🔑 Đặt / Nhận phòng", new Point(col3, row1), btnSize, btnFont);
+            btnDatNhanPhong.Click += (s, e) => MoForm(new FrmDatPhong());
+
+            // Hàng 2
+            btnSuDungDichVu = TaoButton("⚙️ Sử dụng dịch vụ", new Point(col1, row2), btnSize, btnFont);
+            btnSuDungDichVu.Click += (s, e) => MoForm(new FrmDichVu());
+
+            btnTraPhong = TaoButton("💰 Trả phòng - TT", new Point(col2, row2), btnSize, btnFont);
+            btnTraPhong.Click += (s, e) => MoForm(new FrmTraPhong());
+
+            btnThongKe = TaoButton("📊 Thống kê", new Point(col3, row2), btnSize, btnFont);
+            btnThongKe.Click += (s, e) => MoForm(new FrmThongKe());
+
+            // Hàng 3 (Ở giữa)
+            btnThoat = TaoButton("🚪 Thoát", new Point(col2, row3), btnSize, btnFont);
+            btnThoat.Click += (s, e) => Application.Exit();
+
+            // Thêm các nút vào Form
+            this.Controls.Add(btnDanhMuc);
+            this.Controls.Add(btnPhongTienNghi);
+            this.Controls.Add(btnDatNhanPhong);
+            this.Controls.Add(btnSuDungDichVu);
+            this.Controls.Add(btnTraPhong);
+            this.Controls.Add(btnThongKe);
+            this.Controls.Add(btnThoat);
         }
 
-        // Hàm tạo nút đã được nâng cấp để chuẩn bị sẵn layout cho Icon
-        private Button MakeBtn(string name, string text, int x, int y, int w, int h) => new Button
+        // Hàm tạo nút đã được dọn dẹp sạch sẽ, không cần xử lý Image nữa
+        private Button TaoButton(string text, Point location, Size size, Font font)
         {
-            Name = name,
-            Text = text,
-            Location = new Point(x, y),
-            Size = new Size(w, h),
-            Font = new Font("Segoe UI", 10),
+            return new Button
+            {
+                Text = text,
+                Location = location,
+                Size = size,
+                Font = font,
+                BackColor = Color.FromArgb(245, 245, 245),
+                FlatStyle = FlatStyle.Standard,
+                Cursor = Cursors.Hand
+            };
+        }
 
-            // 3 dòng này cực kỳ quan trọng để Icon và Chữ không đè lên nhau
-            TextImageRelation = TextImageRelation.ImageBeforeText,
-            ImageAlign = ContentAlignment.MiddleLeft,
-            TextAlign = ContentAlignment.MiddleCenter,
-            Padding = new Padding(15, 0, 0, 0) // Thụt đầu dòng cho Icon đỡ dính viền
-        };
+        // Hàm mở form con
+        private void MoForm(Form f)
+        {
+            this.Hide();
+            f.ShowDialog(this);
+            this.Show();
+        }
     }
 }
