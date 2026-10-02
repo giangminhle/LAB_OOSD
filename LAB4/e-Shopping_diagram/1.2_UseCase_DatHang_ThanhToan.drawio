@@ -1,0 +1,82 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="uc-dathang" name="UseCase - Đặt hàng và thanh toán">
+    <mxGraphModel dx="1373" dy="749" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sys" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;verticalAlign=top;align=left;spacingLeft=15;spacingTop=5;fontStyle=1;fontSize=14;strokeWidth=2;" value="Hệ thống e-SHOPPING" vertex="1">
+          <mxGeometry height="700" width="780" x="200" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="main" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=default;strokeColor=#1F3864;strokeWidth=2;fontStyle=1;" value="Đặt hàng và&lt;br&gt;thanh toán" vertex="1">
+          <mxGeometry height="68" width="236" x="242" y="346" as="geometry" />
+        </mxCell>
+        <mxCell id="login" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f7f9fc;strokeColor=#333333;" value="Đăng nhập" vertex="1">
+          <mxGeometry height="68" width="236" x="242" y="71" as="geometry" />
+        </mxCell>
+        <mxCell id="reg" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f7f9fc;strokeColor=#333333;" value="Đăng ký tài khoản" vertex="1">
+          <mxGeometry height="68" width="236" x="627" y="71" as="geometry" />
+        </mxCell>
+        <mxCell id="ship" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f7f9fc;strokeColor=#333333;" value="Chọn loại hình&lt;br&gt;giao hàng" vertex="1">
+          <mxGeometry height="68" width="236" x="542" y="171" as="geometry" />
+        </mxCell>
+        <mxCell id="fee" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f7f9fc;strokeColor=#333333;" value="Tính phí giao hàng" vertex="1">
+          <mxGeometry height="68" width="236" x="542" y="256" as="geometry" />
+        </mxCell>
+        <mxCell id="recv" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f7f9fc;strokeColor=#333333;" value="Nhập thông tin&lt;br&gt;người nhận" vertex="1">
+          <mxGeometry height="68" width="236" x="542" y="341" as="geometry" />
+        </mxCell>
+        <mxCell id="pay" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f7f9fc;strokeColor=#333333;" value="Thanh toán bằng&lt;br&gt;thẻ tín dụng" vertex="1">
+          <mxGeometry height="68" width="236" x="542" y="426" as="geometry" />
+        </mxCell>
+        <mxCell id="check" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f7f9fc;strokeColor=#333333;" value="Kiểm tra thẻ&lt;br&gt;tín dụng" vertex="1">
+          <mxGeometry height="68" width="236" x="582" y="531" as="geometry" />
+        </mxCell>
+        <mxCell id="mail" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f7f9fc;strokeColor=#333333;" value="Gửi email&lt;br&gt;xác nhận" vertex="1">
+          <mxGeometry height="68" width="236" x="242" y="626" as="geometry" />
+        </mxCell>
+        <mxCell id="kh" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;" value="Khách hàng" vertex="1">
+          <mxGeometry height="60" width="30" x="70" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="pay_sys" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;" value="&lt;i style=&quot;font-weight:normal;font-size:10px&quot;&gt;«external system»&lt;/i&gt;&lt;br&gt;Dịch vụ thanh toán&lt;br&gt;trực tuyến" vertex="1">
+          <mxGeometry height="60" width="30" x="1070" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="mail_sys" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;" value="&lt;i style=&quot;font-weight:normal;font-size:10px&quot;&gt;«external system»&lt;/i&gt;&lt;br&gt;Dịch vụ email" vertex="1">
+          <mxGeometry height="60" width="30" x="1070" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="main" style="endArrow=open;endSize=12;dashed=1;html=1;labelBackgroundColor=#ffffff;fontStyle=2;" target="login" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="main" style="endArrow=open;endSize=12;dashed=1;html=1;labelBackgroundColor=#ffffff;fontStyle=2;" target="ship" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="main" style="endArrow=open;endSize=12;dashed=1;html=1;labelBackgroundColor=#ffffff;fontStyle=2;" target="fee" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="main" style="endArrow=open;endSize=12;dashed=1;html=1;labelBackgroundColor=#ffffff;fontStyle=2;" target="recv" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="main" style="endArrow=open;endSize=12;dashed=1;html=1;labelBackgroundColor=#ffffff;fontStyle=2;" target="pay" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="pay" style="endArrow=open;endSize=12;dashed=1;html=1;labelBackgroundColor=#ffffff;fontStyle=2;" target="check" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="reg" style="endArrow=open;endSize=12;dashed=1;html=1;labelBackgroundColor=#ffffff;fontStyle=2;" target="login" value="«extend»&lt;br&gt;[chưa có tài khoản]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="mail" style="endArrow=open;endSize=12;dashed=1;html=1;labelBackgroundColor=#ffffff;fontStyle=2;" target="main" value="«extend»&lt;br&gt;[khách hàng có cung cấp email]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" edge="1" parent="1" source="kh" style="endArrow=none;html=1;" target="main" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" edge="1" parent="1" source="pay_sys" style="endArrow=none;html=1;" target="check" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" edge="1" parent="1" source="mail_sys" style="endArrow=none;html=1;" target="mail" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
