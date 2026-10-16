@@ -1,0 +1,112 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="UseCaseTongQuat" id="lab6-uc1">
+    <mxGraphModel dx="1451" dy="742" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bound" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;" value="" vertex="1">
+          <mxGeometry height="700" width="640" x="290" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="aBN" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;" value="BenhNhan" vertex="1">
+          <mxGeometry height="60" width="30" x="120" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="aBS" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;" value="BacSi" vertex="1">
+          <mxGeometry height="60" width="30" x="120" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="aCSKH" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;" value="NV Cham soc&#xa;khach hang" vertex="1">
+          <mxGeometry height="60" width="30" x="960" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="aTN" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;" value="NV Thu ngan" vertex="1">
+          <mxGeometry height="60" width="30" x="960" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="u1" parent="1" style="ellipse;whiteSpace=wrap;" value="UC01 Dang ky&#xa;kham lan dau" vertex="1">
+          <mxGeometry height="55" width="150" x="300" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="u2" parent="1" style="ellipse;whiteSpace=wrap;" value="UC02 Dong le phi nam" vertex="1">
+          <mxGeometry height="55" width="150" x="460" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="D1sGn5picQuq4I0XqA2J-1" edge="1" parent="1" source="u3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="u2" value="">
+          <mxGeometry relative="1" x="0.0051" as="geometry" />
+        </mxCell>
+        <mxCell id="u3" parent="1" style="ellipse;whiteSpace=wrap;" value="UC03 Cap ho so&#xa;benh an" vertex="1">
+          <mxGeometry height="55" width="150" x="550" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u4" parent="1" style="ellipse;whiteSpace=wrap;" value="UC04 Dat lich hen&#xa;dinh ky quy" vertex="1">
+          <mxGeometry height="55" width="150" x="300" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="u5" parent="1" style="ellipse;whiteSpace=wrap;fillColor=default;" value="UC05 Tiep nhan +&#xa;tra cuu ho so" vertex="1">
+          <mxGeometry height="55" width="150" x="480" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="u6" parent="1" style="ellipse;whiteSpace=wrap;" value="UC06 Kham benh&#xa;(ghi trieu chung)" vertex="1">
+          <mxGeometry height="55" width="150" x="480" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="u7" parent="1" style="ellipse;whiteSpace=wrap;" value="UC07 Chi dinh +&#xa;nhap KQ xet nghiem" vertex="1">
+          <mxGeometry height="55" width="150" x="310" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="u8" parent="1" style="ellipse;whiteSpace=wrap;fillColor=default;" value="UC08 Lap toa thuoc" vertex="1">
+          <mxGeometry height="55" width="150" x="480" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="u9" parent="1" style="ellipse;whiteSpace=wrap;" value="UC09 Thanh toan&#xa;vien phi" vertex="1">
+          <mxGeometry height="55" width="150" x="480" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="u10" parent="1" style="ellipse;whiteSpace=wrap;" value="UC10 Ghi nhan +&#xa;hoan tat dot DT" vertex="1">
+          <mxGeometry height="55" width="150" x="480" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="u11" parent="1" style="ellipse;whiteSpace=wrap;" value="UC11 Tra cuu lich su&#xa;+ bao cao" vertex="1">
+          <mxGeometry height="55" width="150" x="730" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="u12" parent="1" style="ellipse;whiteSpace=wrap;" value="UC12 Quan tri danh muc&#xa;(Khoa/BS/Thuoc)" vertex="1">
+          <mxGeometry height="55" width="150" x="750" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" edge="1" parent="1" source="aBN" style="endArrow=none;" target="u1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l2" edge="1" parent="1" source="aBN" style="endArrow=none;" target="u4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l3" edge="1" parent="1" source="aBS" style="endArrow=none;" target="u6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l4" edge="1" parent="1" source="aBS" style="endArrow=none;" target="u7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l5" edge="1" parent="1" source="aBS" style="endArrow=none;" target="u8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l6" edge="1" parent="1" source="aCSKH" style="endArrow=none;" target="u1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l7" edge="1" parent="1" source="aCSKH" style="endArrow=none;" target="u5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l8" edge="1" parent="1" source="aCSKH" style="endArrow=none;" target="u10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l9" edge="1" parent="1" source="aTN" style="endArrow=none;" target="u2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l10" edge="1" parent="1" source="aTN" style="endArrow=none;" target="u9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" edge="1" parent="1" source="u1" style="endArrow=open;dashed=1;" target="u2" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" edge="1" parent="1" source="u1" style="endArrow=open;dashed=1;" target="u3" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" edge="1" parent="1" source="u6" style="endArrow=open;dashed=1;" target="u5" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" edge="1" parent="1" source="u8" style="endArrow=open;dashed=1;" target="u6" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r5" edge="1" parent="1" source="u10" style="endArrow=open;dashed=1;" target="u9" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r6" edge="1" parent="1" source="u7" style="endArrow=open;dashed=1;" target="u6" value="«extend»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
