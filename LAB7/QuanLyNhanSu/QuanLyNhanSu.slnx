@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="QuanLyNhanSu.Tests/QuanLyNhanSu.Tests.csproj" />
+  <Project Path="QuanLyNhanSu/QuanLyNhanSu.csproj" />
+</Solution>
