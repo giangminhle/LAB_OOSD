@@ -1,7 +1,7 @@
 -- =============================================================
 -- LAB7 - QUAN LY NHAN SU - CONG TY SON DONG A
 -- DB: QuanLyNhanSu | SQL Server 2016+
--- Thiet ke CSDL nhat quan voi Class Diagram (19 bang).
+-- Thiet ke CSDL nhat quan voi Class Diagram (18 bang).
 -- Chay lai duoc nhieu lan: DROP theo thu tu nguoc FK roi tao lai.
 -- =============================================================
 IF DB_ID(N'QuanLyNhanSu') IS NULL CREATE DATABASE QuanLyNhanSu;
@@ -682,5 +682,5 @@ BEGIN
 END
 GO
 
-PRINT N'Da tao xong 19 bang + 3 stored procedure + trigger cho CSDL QuanLyNhanSu.';
+PRINT N'Da tao xong 18 bang + 3 stored procedure + trigger cho CSDL QuanLyNhanSu.';
 GO

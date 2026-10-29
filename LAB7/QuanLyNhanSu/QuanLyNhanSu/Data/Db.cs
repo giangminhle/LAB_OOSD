@@ -2,19 +2,21 @@ using System;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
+using System.Text.RegularExpressions;
 
 namespace QuanLyNhanSu.Data
 {
     /// <summary>
-    /// Lop Data: chi lo ket noi va thuc thi SQL co tham so.
-    /// Toan bo nghiep vu + validate nam o lop Services.
+    /// Lop Data: quan ly ket noi va thuc thi SQL co tham so.
+    /// Toan bo nghiep vu va validate nam o lop Services.
     /// </summary>
     public static class Db
     {
         private static string _connectionString;
 
         /// <summary>
-        /// Connection string lay tu App.config. Co the doi tam thoi tu FrmKetNoi.
+        /// Connection string lay tu App.config. Co the doi tu FrmKetNoi.
         /// </summary>
         public static string ConnectionString
         {
@@ -24,7 +26,7 @@ namespace QuanLyNhanSu.Data
                 ConnectionStringSettings cs = ConfigurationManager.ConnectionStrings["QuanLyNhanSuDb"];
                 if (cs != null && !string.IsNullOrWhiteSpace(cs.ConnectionString))
                     return cs.ConnectionString;
-                return @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;User ID=sa;Password=25022005;";
+                return @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;User ID=sa;Password=25022005;MultipleActiveResultSets=True;";
             }
             set { _connectionString = value; }
         }
@@ -74,12 +76,52 @@ namespace QuanLyNhanSu.Data
             try
             {
                 object v = Scalar("SELECT DB_NAME()");
-                message = "Ket noi thanh cong. CSDL: " + Convert.ToString(v);
+                message = "Kết nối thành công! CSDL hiện tại: " + Convert.ToString(v);
                 return true;
             }
             catch (Exception ex)
             {
-                message = "Khong ket noi duoc: " + ex.Message;
+                message = "Không kết nối được: " + ex.Message;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Chay file script .sql duoc chia thanh cac batch boi tu khoa GO.
+        /// </summary>
+        public static bool ExecuteScriptFile(string filePath, out string message)
+        {
+            try
+            {
+                if (!File.Exists(filePath))
+                {
+                    message = "Không tìm thấy file: " + filePath;
+                    return false;
+                }
+
+                string script = File.ReadAllText(filePath);
+                string[] batches = Regex.Split(script, @"^\s*GO\s*$", RegexOptions.Multiline | RegexOptions.IgnoreCase);
+
+                using (var conn = OpenConnection())
+                {
+                    foreach (var batch in batches)
+                    {
+                        string sql = batch.Trim();
+                        if (string.IsNullOrWhiteSpace(sql)) continue;
+                        using (var cmd = new SqlCommand(sql, conn))
+                        {
+                            cmd.CommandTimeout = 120;
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                }
+
+                message = "Chạy script thành công: " + Path.GetFileName(filePath);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                message = "Lỗi khi chạy script " + Path.GetFileName(filePath) + ": " + ex.Message;
                 return false;
             }
         }
