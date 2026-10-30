@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="QuanLyCaoOc.Tests/QuanLyCaoOc.Tests.csproj" />
+  <Project Path="QuanLyCaoOc/QuanLyCaoOc.csproj" />
+</Solution>
