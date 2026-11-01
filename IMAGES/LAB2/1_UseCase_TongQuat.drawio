@@ -1,0 +1,144 @@
+<mxfile host="app.diagrams.net" pages="8">
+  <diagram name="1_UseCase_TongQuat" id="d1">
+    <mxGraphModel dx="1400" dy="1000" grid="1" gridSize="10" connect="1" fold="1" page="1" pageScale="1" pageWidth="790" pageHeight="880" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bound" value="Hệ thống quản lý thư viện" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;fontStyle=1;fontSize=13;fillColor=none;strokeColor=#000000;fontFamily=Arial;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="230" y="10" width="360" height="760" as="geometry" />
+        </mxCell>
+        <mxCell id="u1" value="Quản lý nhân viên" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontFamily=Arial;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="300" y="60" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u2" value="Quản lý thể loại, nhà xuất bản" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontFamily=Arial;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="300" y="140" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u3" value="Quản lý đầu sách" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontFamily=Arial;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="300" y="220" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u4" value="Cấp / gia hạn thẻ độc giả" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontFamily=Arial;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="300" y="300" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u5" value="Mượn sách" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontFamily=Arial;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="300" y="380" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u6" value="Kiểm tra điều kiện mượn" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontFamily=Arial;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="300" y="460" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u7" value="Trả sách" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontFamily=Arial;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="300" y="540" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u8" value="Lập phiếu phạt" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontFamily=Arial;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="300" y="620" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u9" value="Thống kê hằng tháng" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontFamily=Arial;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="300" y="700" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="aDG" value="Độc giả" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontFamily=Arial;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="90" y="401" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l0" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;entryX=0;entryY=0.5;" edge="1" parent="1" source="aDG" target="u4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;entryX=0;entryY=0.5;" edge="1" parent="1" source="aDG" target="u5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l2" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;entryX=0;entryY=0.5;" edge="1" parent="1" source="aDG" target="u7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aTT" value="Thủ thư" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontFamily=Arial;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="670" y="428" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l3" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;entryX=1;entryY=0.5;" edge="1" parent="1" source="aTT" target="u1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l4" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;entryX=1;entryY=0.5;" edge="1" parent="1" source="aTT" target="u4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l5" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;entryX=1;entryY=0.5;" edge="1" parent="1" source="aTT" target="u5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l6" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;entryX=1;entryY=0.5;" edge="1" parent="1" source="aTT" target="u7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l7" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;entryX=1;entryY=0.5;" edge="1" parent="1" source="aTT" target="u8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l8" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;entryX=1;entryY=0.5;" edge="1" parent="1" source="aTT" target="u9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aQL" value="NV quản lý sách" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontFamily=Arial;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="670" y="175" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l9" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;entryX=1;entryY=0.5;" edge="1" parent="1" source="aQL" target="u2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l10" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;entryX=1;entryY=0.5;" edge="1" parent="1" source="aQL" target="u3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d0" value="«include»" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=0;strokeColor=#000000;fontSize=11;fontFamily=Arial;fontColor=#000000;" edge="1" parent="1" source="u5" target="u6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d1" value="«extend»" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=0;strokeColor=#000000;fontSize=11;fontFamily=Arial;fontColor=#000000;" edge="1" parent="1" source="u8" target="u7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="vb4jXb4XOukxTwbWr6WB" name="Page-2">
+    <mxGraphModel dx="1030" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="I5LwKb5-gpSb54G6J3BQ" name="Page-3">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="aQXvD1WlXbNCOHfuHkvW" name="Page-4">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="hxGuUgDFK9SsQW9wP0-z" name="Page-5">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="aQsTmLSk08UCJ1ZG9II2" name="Page-6">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="yZwXXQ_A21tBoCfiJxo_" name="Page-7">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="YTYo90R5YmIti3DkfM8Y" name="Page-8">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

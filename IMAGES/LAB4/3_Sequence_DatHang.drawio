@@ -1,0 +1,28 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Sequence dat hang" id="sq1">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="l1" value="Khách hàng" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=44;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1"><mxGeometry x="14" y="20" width="112" height="490" as="geometry"/></mxCell>
+        <mxCell id="l2" value=":FrmThanhToan" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=44;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="144" y="20" width="112" height="490" as="geometry"/></mxCell>
+        <mxCell id="l3" value=":DonHangCtrl" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=44;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="279" y="20" width="112" height="490" as="geometry"/></mxCell>
+        <mxCell id="l4" value=":DVThanhToan&lt;br&gt;«hệ thống ngoài»" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=44;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1"><mxGeometry x="419" y="20" width="112" height="490" as="geometry"/></mxCell>
+        <mxCell id="l5" value=":DVEmail&lt;br&gt;«hệ thống ngoài»" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=44;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1"><mxGeometry x="554" y="20" width="112" height="490" as="geometry"/></mxCell>
+
+        <mxCell id="alt" value="alt [hợp lệ]" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=95;height=20;fillColor=none;" vertex="1" parent="1"><mxGeometry x="215" y="282" width="450" height="163" as="geometry"/></mxCell>
+
+        <mxCell id="m1" value="nhập thông tin" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="70" y="100" as="sourcePoint"/><mxPoint x="198" y="100" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m2" value="đặtHàng(thông tin)" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="200" y="135" as="sourcePoint"/><mxPoint x="333" y="135" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m3" value="kiểm tra thẻ" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;align=left;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="335" y="170" as="sourcePoint"/><mxPoint x="337" y="190" as="targetPoint"/><Array as="points"><mxPoint x="375" y="170"/><mxPoint x="375" y="190"/></Array></mxGeometry></mxCell>
+        <mxCell id="m4" value="xácThựcThẻ(thẻ)" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="335" y="225" as="sourcePoint"/><mxPoint x="473" y="225" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m5" value="kết quả hợp lệ" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="473" y="260" as="sourcePoint"/><mxPoint x="337" y="260" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m6" value="ghi nhận đơn" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;align=left;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="335" y="325" as="sourcePoint"/><mxPoint x="337" y="345" as="targetPoint"/><Array as="points"><mxPoint x="375" y="325"/><mxPoint x="375" y="345"/></Array></mxGeometry></mxCell>
+        <mxCell id="m7" value="[có email] gửi email xác nhận" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="335" y="385" as="sourcePoint"/><mxPoint x="608" y="385" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m8" value="báo thành công" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="333" y="430" as="sourcePoint"/><mxPoint x="202" y="430" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m9" value="hiển thị kết quả" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="198" y="480" as="sourcePoint"/><mxPoint x="72" y="480" as="targetPoint"/></mxGeometry></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
