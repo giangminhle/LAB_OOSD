@@ -63,9 +63,9 @@ namespace QuanLyNhanSu.UI
             string valueMember, string displayMember, int? selected = null)
         {
             cbo.DataSource = null;
-            cbo.DataSource = dt;
             cbo.ValueMember = valueMember;
             cbo.DisplayMember = displayMember;
+            cbo.DataSource = dt;
             if (selected.HasValue)
             {
                 try { cbo.SelectedValue = selected.Value; } catch { }
